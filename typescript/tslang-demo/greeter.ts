@@ -1,12 +1,19 @@
+class Student {
+	fullName: string
+	constructor(public firstName, public middleInitial, public lastName) {
+		this.fullName = firstName + '' + middleInitial + '' + lastName
+	}
+}
+
 interface Person {
 	firstName: string
 	lastName: string
 }
 
 function greeter(person: Person) {
-    return 'Hello, ' + person.firstName + ' ' + person.lastName
+    return 'hello, ' + person.firstName + ' ' + person.lastName
 }
 
-let user = { firstName: 'Leo', lastName: 'Chan ' }
+let user = new Student('Leo', 'M.', 'Chan')
 
 document.body.innerHTML = greeter(user)
