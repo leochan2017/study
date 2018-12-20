@@ -1,7 +1,12 @@
-function greeter(person) {
-    return 'Hello, ' + person
+interface Person {
+	firstName: string
+	lastName: string
 }
 
-let user = 'Leo'
+function greeter(person: Person) {
+    return 'Hello, ' + person.firstName + ' ' + person.lastName
+}
+
+let user = { firstName: 'Leo', lastName: 'Chan ' }
 
 document.body.innerHTML = greeter(user)
